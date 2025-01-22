@@ -5,41 +5,65 @@
 {% block content %}
 <div class="container mx-auto">
     <div class="prose-sm lg:prose-base max-w-none p-10">
-        <h3 class="text-center">支票捐款 Check Donation</h3>
-        <p class="text-center">抬頭寫 Payable to: U.S. Zen Institute<br />寄給 Mail to: 19225 Liberty Mill Road, Germantown, MD 20874</p>
-        <hr />
-        <h3 class="text-center">信用卡捐款 Credit Card Donation</h3>
-        <div class="flex flex-row items-center justify-center">
-            <a class="btn btn-square mx-1" href="https://swipesimple.com/links/lnk_7958d865">$20</a>
-            <a class="btn btn-square mx-1" href="https://swipesimple.com/links/lnk_503b94ab">$50</a>
-            <a class="btn btn-square mx-1" href="https://swipesimple.com/links/lnk_1e132b12">$100</a>
-            <a class="btn mx-1" href="https://swipesimple.com/links/lnk_8815c738">Other Amount</a>
+        <div class="m-auto grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div class="card shadow-xl">
+                <div class="card-body">
+                    <h3 class="card-title">支票捐款 Check Donation</h3>
+                    <p>抬頭寫 Payable to: U.S. Zen Institute<br />寄給 Mail to: 19225 Liberty Mill Road,
+                        Germantown, MD 20874</p>
+                </div>
+            </div>
+            <div class="card shadow-xl">
+                <div class="card-body">
+                    <h3 class="card-title">信用卡捐款 Credit Card Donation</h3>
+                    <div class="card-actions justify-center">
+                        <a class="btn btn-square mx-1" href="https://swipesimple.com/links/lnk_7958d865">$20</a>
+                        <a class="btn btn-square mx-1" href="https://swipesimple.com/links/lnk_503b94ab">$50</a>
+                        <a class="btn btn-square mx-1" href="https://swipesimple.com/links/lnk_1e132b12">$100</a>
+                        <a class="btn mx-1" href="https://swipesimple.com/links/lnk_8815c738">Other Amount</a>
+                    </div>
+                </div>
+            </div>
+            <div class="card shadow-xl">
+                <div class="card-body">
+                    <h3 class="card-title">捐款 PayPal Donation</h3>
+                    <div class="flex flex-grow items-center justify-center">
+                        <div class="card-actions justify-center">
+                            <a href="https://www.paypal.com/donate?hosted_button_id=UFP9BVJ87AA5A">
+                                <img class="not-prose m-0" src="../images/paypal.png" />
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card shadow-xl">
+                <div class="card-body">
+                    <h3 class="card-title">Zelle Donation</h3>
+                    <h4>Scan in your banking app to pay</h4>
+                    <div class="card-actions justify-center">
+                        <img class="not-prose m-0" src="../images/zelle_qr.png" />
+                    </div>
+                </div>
+            </div>
         </div>
-        <hr />
-        <h3 class="text-center">捐款 PayPal Donation</h3>
-        <div class="flex flex-row items-center justify-center">
-            <a href="https://www.paypal.com/donate?hosted_button_id=UFP9BVJ87AA5A">
-                <img class="not-prose m-0" src="../images/paypal.jpg" />
-            </a>
-        </div>
-        <hr />
-        <h3 class="text-center">Zelle Donation</h3>
-        <h4 class="text-center">Scan in your banking app to pay</h3>
-        <div class="flex flex-row items-center justify-center">
-            <img class="not-prose m-0" src="../images/zelle_qr.png" />
-        </div>
-        <hr />
+        <div class="divider"></div>
         <blockquote class="p-4 my-4 border-s-4 border-gray-300 bg-gray-50 dark:border-gray-500 dark:bg-gray-800">
-            <p class="italic font-medium leading-relaxed text-gray-900 dark:text-white">佈施者為人所親愛、所稱譽，於眾人前有自信、無怖畏... 因佈施而得之功德，投生於天界，與天眾共享長樂... 依隨佛語如是者，善逝弟子於天界，享受歡喜與快樂。《增支部》5.34</p>
-            <p class="italic font-medium leading-relaxed text-gray-900 dark:text-white">By giving, they become dear and many resort to them. They attain good reputations and their fame increases.
-                The generous ones are composed and confidently enter the assembly... By giving gifts… when they are settled in
-                the triple heaven, for a long time they delight in the companionship with the devas... Having fulfilled the word
-                of the unattached Stable One (asitassa), the Fortunate One (sugato)'s disciples rejoice in heaven. (AN 5.34)
+            <p class="italic font-medium leading-relaxed text-gray-900 dark:text-white">佈施者為人所親愛、所稱譽，於眾人前有自信、無怖畏...
+                因佈施而得之功德，投生於天界，與天眾共享長樂... 依隨佛語如是者，善逝弟子於天界，享受歡喜與快樂。《增支部》5.34</p>
+            <p class="italic font-medium leading-relaxed text-gray-900 dark:text-white">By giving, they become dear and
+                many resort to them. They attain good reputations and their fame increases.
+                The generous ones are composed and confidently enter the assembly... By giving gifts… when they are
+                settled in
+                the triple heaven, for a long time they delight in the companionship with the devas... Having fulfilled
+                the word
+                of the unattached Stable One (asitassa), the Fortunate One (sugato)'s disciples rejoice in heaven. (AN
+                5.34)
             </p>
         </blockquote>
-        <hr />
+        <div class="divider"></div>
         <p class="text-center">美國禪學講堂是 501c (3) 非營利組織， 所有捐款均可免稅。</p>
-        <p class="text-center">U.S. Zen Institute is a 501c (3) non-profit organization. All donations are tax-deductible.</p>
+        <p class="text-center">U.S. Zen Institute is a 501c (3) non-profit organization. All donations are
+            tax-deductible.</p>
     </div>
 </div>
 {% endblock %}
