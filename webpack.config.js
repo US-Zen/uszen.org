@@ -19,6 +19,7 @@ module.exports = {
       entry: {
         index: 'src/views/index.html',
         about: 'src/views/about.html',
+        columbarium: 'src/views/columbarium.html',
         support: 'src/views/support.html',
         contact: 'src/views/contact.html'
       },
