@@ -21,7 +21,8 @@ module.exports = {
         about: 'src/views/about.html',
         columbarium: 'src/views/columbarium.html',
         support: 'src/views/support.html',
-        contact: 'src/views/contact.html'
+        contact: 'src/views/contact.html',
+        courses: 'src/views/courses.html'
       },
       js: {
         // output filename of compiled JavaScript
