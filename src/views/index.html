@@ -2,38 +2,9 @@
 
 {% set title="US Zen Institute" %}
 
-{% macro carouselItem(index, imageLink) %}
-<div id="slide{{ index }}" class="carousel-item relative flex flex-col w-full">
-    <div class="flex-grow m-2 overflow-hidden pt-0 mx-5">
-        <div class="relative h-full w-full">
-            <div class="absolute flex -translate-y-1/2 justify-between transform top-1/2 pb-5 left-5 right-5">
-                <a id="prev-link-{{ index }}" href="#slide{{ index - 1 }}"
-                    class="btn btn-circle bg-light hover:bg-light border-0 shadow-xl text-dark text-lg">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
-                        <path fill-rule="evenodd"
-                            d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8" />
-                    </svg>
-                </a>
-                <a id="next-link-{{ index }}" href="#slide{{ index + 1 }}"
-                    class="btn btn-circle bg-light hover:bg-light border-0 shadow-xl text-dark text-lg">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
-                        <path fill-rule="evenodd"
-                            d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8" />
-                    </svg>
-                </a>
-            </div>
-            <img class="mx-auto h-[500px] md:h-[600px] object-cover" src="{{ imageLink }}">
-        </div>
-    </div>
-</div>
-{% endmacro %}
-
 {% block banner %}
 <div id="banner" class="flex items-center max-md:flex-col bg-blue-500 text-white px-6 py-3.5 rounded font-[sans-serif]">
-    <p class="text-xs md:text-base flex-1">美國禪學院網站已進行重大更新，有關醍醐寺禪修中心的活動資訊現已轉移至新網站: <a class="link"
-            href="https://amatavihara.org">amatavihara.org</a> | The US Zen site has undergone a significant overhaul.
-        Information pertaining to retreats and regular events at our meditation center in Boyds, MD, has been relocated
-        to a new website: <a class="link" href="https://amatavihara.org">amatavihara.org</a>.</p>
+    <p class="text-xs md:text-base flex-1">美國禪學院網站已進行重大更新，有關醍醐寺禪修中心的活動資訊現已轉移至新網站: <a class="link" href="https://amatavihara.org">amatavihara.org</a> | The US Zen site has undergone a significant overhaul. Information pertaining to retreats and regular events at our meditation center in Boyds, MD, has been relocated to a new website: <a class="link" href="https://amatavihara.org">amatavihara.org</a>.</p>
     <div class="max-md:mt-4">
         <svg xmlns="http://www.w3.org/2000/svg" class="w-4 cursor-pointer fill-white inline-block"
             viewBox="0 0 320.591 320.591" onclick="closeBanner()">
@@ -64,8 +35,7 @@
             </p>
         </div>
         <a href="columbarium.html">
-            <img src="../images/homepage/columbarium_wing_drawing.jpg" alt="Sacred Space"
-                class="mx-auto my-4 rounded w-full sm:max-w-[600px] px-2" />
+            <img src="../images/homepage/columbarium_wing_drawing.jpg" alt="Sacred Space" class="mx-auto my-4 rounded w-full sm:max-w-[600px] px-2" />
         </a>
         <div class="text-center max-w-xl">
             <p class="text-base">
@@ -73,8 +43,7 @@
             </p>
             <p class="text-lg font-semibold">舍利堂新翼增建項目</p>
             <a href="columbarium.html">
-                <img src="../images/homepage/columbarium_wing_3d.jpg" alt="Sacred Space"
-                    class="mx-auto my-4 rounded w-full sm:max-w-[600px] px-2" />
+                <img src="../images/homepage/columbarium_wing_3d.jpg" alt="Sacred Space" class="mx-auto my-4 rounded w-full sm:max-w-[600px] px-2" />
             </a>
             <p class="text-base">
                 Support this compassionate vision for future generations.
@@ -83,29 +52,9 @@
                 支持這項充滿慈悲心的願景，為未來世代的佛弟子而建。
             </p>
         </div>
-        <div id="carousel" class="carousel mx-auto my-4 w-full sm:max-w-[600px] md:max-w-[800px] px-2">
-            {{
-                carouselItem(1, '../images/homepage/1768422571103.jpg')
-            }}
-            {{
-                carouselItem(2, '../images/homepage/1768422572115.jpg')
-            }}
-            {{
-                carouselItem(3, '../images/homepage/1768422572828.jpg')
-            }}
-            {{
-                carouselItem(4, '../images/homepage/1768422573510.jpg')
-            }}
-            {{
-                carouselItem(5, '../images/homepage/1768422573954.jpg')
-            }}
-            {{
-                carouselItem(6, '../images/homepage/1768422578619.jpg')
-            }}
-        </div>
+
         <div class="text-center mt-4">
-            <a href="columbarium.html"
-                class="inline-flex flex-col items-center bg-yellow-500 text-black px-5 py-2 rounded font-semibold hover:bg-yellow-600">
+            <a href="columbarium.html" class="inline-flex flex-col items-center bg-yellow-500 text-black px-5 py-2 rounded font-semibold hover:bg-yellow-600">
                 <span>Learn More</span>
                 <span class="text-sm font-normal">了解詳情</span>
             </a>
@@ -119,8 +68,5 @@
     function closeBanner() {
         document.getElementById("banner").style.display = 'none';
     }
-    const nodes = Array.from(carousel.childNodes).filter(c => c.nodeType != 3)
-    document.getElementById("prev-link-1").href = `#slide${nodes.length}`
-    document.getElementById(`next-link-${nodes.length}`).href = '#slide1'
 </script>
 {% endblock %}
