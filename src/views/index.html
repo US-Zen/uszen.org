@@ -5,7 +5,7 @@
 {% macro carouselItem(index, imageLink) %}
 <div id="slide{{ index }}" class="carousel-item relative flex flex-col w-full">
     <div class="flex-grow m-2 overflow-hidden pt-0 mx-5">
-        <div class="relative h-full w-full">
+        <div class="relative aspect-square">
             <div class="absolute flex -translate-y-1/2 justify-between transform top-1/2 pb-5 left-5 right-5">
                 <a id="prev-link-{{ index }}" href="#slide{{ index - 1 }}"
                     class="btn btn-circle bg-light hover:bg-light border-0 shadow-xl text-dark text-lg">
@@ -22,7 +22,7 @@
                     </svg>
                 </a>
             </div>
-            <img class="mx-auto h-[500px] md:h-[600px] object-cover" src="{{ imageLink }}">
+            <img class="mx-auto w-full h-full object-cover " src="{{ imageLink }}">
         </div>
     </div>
 </div>
