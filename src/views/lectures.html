@@ -1,0 +1,19 @@
+{% extends "src/views/layout.html" %}
+
+{% set title = "Lectures" %}
+
+{% block content %}
+<div class="container mx-auto">
+    <div class="prose-sm lg:prose-base p-10">
+        <h2 class="text-center">2026 法曜法師 美國禪學院 金剛經</h2>
+
+        <div class="flex items-center justify-center">
+            <iframe class="aspect-video w-[560px] lg:w-[700px]"
+                src="https://www.youtube.com/embed/videoseries?si=WC-GiAvixTvlryk1&amp;list=PL9I1Ncy5MTbHdYxq8_h5nW4zoFhlXH_wL"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+    </div>
+</div>
+{% endblock %}

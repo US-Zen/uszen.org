@@ -22,7 +22,8 @@ module.exports = {
         columbarium: 'src/views/columbarium.html',
         support: 'src/views/support.html',
         contact: 'src/views/contact.html',
-        courses: 'src/views/courses.html'
+        courses: 'src/views/courses.html',
+        lectures: 'src/views/lectures.html'
       },
       js: {
         // output filename of compiled JavaScript

@@ -10,7 +10,22 @@
 
 {% macro navItems() %}
 <li><a href="about.html">About</a></li>
-<li><a href="courses.html">課程 Courses</a></li>
+<li class="dropdown dropdown-hover lg:block hidden">
+    <a tabindex="0" role="button">課程 Courses</a>
+    <ul tabindex="0" class="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52">
+        <li><a href="lectures.html">開示 Lectures</a></li>
+        <li><a href="courses.html">講義 Lecture handout</a></li>
+    </ul>
+</li>
+<li class="lg:hidden">
+    <details>
+        <summary>課程 Courses</summary>
+        <ul class="p-2">
+            <li><a href="lectures.html">開示 Lectures</a></li>
+            <li><a href="courses.html">講義 Lecture handout</a></li>
+        </ul>
+    </details>
+</li>
 <li><a href="support.html">護持我們道場 Support Us</a></li>
 <li><a href="columbarium.html">舍利堂新翼 Columbarium Wing Project</a></li>
 <li><a href="contact.html">聯絡方式 Contact</a></li>
