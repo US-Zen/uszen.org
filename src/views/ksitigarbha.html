@@ -1,0 +1,88 @@
+{% extends "src/views/layout.html" %}
+
+{% set title="Kṣitigarbha Bodhisattva" %}
+
+{% macro galleryItem(imagePath, alt) %}
+<div class="break-inside-avoid bg-white rounded-lg shadow-md overflow-hidden cursor-pointer hover:shadow-lg transition-shadow md:cursor-zoom-in" onclick="openModal(this)">
+    <img src="{{ imagePath }}" alt="Kṣitigarbha Bodhisattva - {{ alt }}" class="w-full h-auto" />
+</div>
+{% endmacro %}
+
+{% block content %}
+<div class="container mx-auto px-4 py-8 max-w-5xl">
+    <div class="prose-sm lg:prose-base max-w-none mb-8">
+        <h2 class="text-center">Kṣitigarbha Bodhisattva</h2>
+        <p>
+            The statue of Kṣitigarbha Bodhisattva was created by the artist Rev. Masahiro Maeda in his workshop at the Museum of Bukkyo University in Kyoto, Japan.
+        </p>
+        <p>
+            For more information about the museum, please visit:
+            <a class="text-blue-500 underline hover:text-blue-700 cursor-pointer" href="https://www.bukkyo-u.ac.jp/museum/" target="_blank" rel="noopener noreferrer">
+                https://www.bukkyo-u.ac.jp/museum/
+            </a>
+        </p>
+        <p class="italic">
+            Photos of Kṣitigarbha Bodhisattva by Rev. Masahiro Maeda. © Rev. Masahiro Maeda. All rights reserved.
+        </p>
+    </div>
+
+    <div class="columns-1 sm:columns-2 md:columns-3 gap-4 space-y-4">
+        {{ galleryItem('../images/ksitigarbha-bodhisattva/LINE_ALBUM_2025.12.20 Purchase of ingredients_260305_1.jpg', 'Purchase of ingredients 1') }}
+        {{ galleryItem('../images/ksitigarbha-bodhisattva/LINE_ALBUM_2025.12.20 Purchase of ingredients_260305_2.jpg', 'Purchase of ingredients 2') }}
+        {{ galleryItem('../images/ksitigarbha-bodhisattva/LINE_ALBUM_2025.12.20 Purchase of ingredients_260305_3.jpg', 'Purchase of ingredients 3') }}
+        {{ galleryItem('../images/ksitigarbha-bodhisattva/LINE_ALBUM_2025.12.20 Purchase of ingredients_260305_4.jpg', 'Purchase of ingredients 4') }}
+        {{ galleryItem('../images/ksitigarbha-bodhisattva/LINE_ALBUM_20251222 Cutting_260305_1.jpg', 'Cutting 1') }}
+        {{ galleryItem('../images/ksitigarbha-bodhisattva/LINE_ALBUM_20251222 Cutting_260305_2.jpg', 'Cutting 2') }}
+        {{ galleryItem('../images/ksitigarbha-bodhisattva/LINE_ALBUM_20251224-20260203 Matching the tree_260305_1.jpg', 'Matching the tree 1') }}
+        {{ galleryItem('../images/ksitigarbha-bodhisattva/LINE_ALBUM_20251224-20260203 Matching the tree_260305_2.jpg', 'Matching the tree 2') }}
+        {{ galleryItem('../images/ksitigarbha-bodhisattva/LINE_ALBUM_20251224-20260203 Matching the tree_260305_3.jpg', 'Matching the tree 3') }}
+        {{ galleryItem('../images/ksitigarbha-bodhisattva/LINE_ALBUM_20251224-20260203 Matching the tree_260305_4.jpg', 'Matching the tree 4') }}
+        {{ galleryItem('../images/ksitigarbha-bodhisattva/LINE_ALBUM_20251224-20260203 Matching the tree_260305_5.jpg', 'Matching the tree 5') }}
+        {{ galleryItem('../images/ksitigarbha-bodhisattva/LINE_ALBUM_20251224-20260203 Matching the tree_260305_6.jpg', 'Matching the tree 6') }}
+        {{ galleryItem('../images/ksitigarbha-bodhisattva/LINE_ALBUM_20251224-20260203 Matching the tree_260305_7.jpg', 'Matching the tree 7') }}
+        {{ galleryItem('../images/ksitigarbha-bodhisattva/LINE_ALBUM_20251224-20260203 Matching the tree_260305_8.jpg', 'Matching the tree 8') }}
+        {{ galleryItem('../images/ksitigarbha-bodhisattva/LINE_ALBUM_20251224-20260203 Matching the tree_260305_9.jpg', 'Matching the tree 9') }}
+        {{ galleryItem('../images/ksitigarbha-bodhisattva/LINE_ALBUM_20251224-20260203 Matching the tree_260305_10.jpg', 'Matching the tree 10') }}
+        {{ galleryItem('../images/ksitigarbha-bodhisattva/LINE_ALBUM_20251224-20260203 Matching the tree_260305_11.jpg', 'Matching the tree 11') }}
+        {{ galleryItem('../images/ksitigarbha-bodhisattva/LINE_ALBUM_20260213-20 Moving to Bukkyo University Museum_260305_1.jpg', 'Moving to Bukkyo University Museum 1') }}
+        {{ galleryItem('../images/ksitigarbha-bodhisattva/LINE_ALBUM_20260213-20 Moving to Bukkyo University Museum_260305_2.jpg', 'Moving to Bukkyo University Museum 2') }}
+        {{ galleryItem('../images/ksitigarbha-bodhisattva/LINE_ALBUM_20260213-20 Moving to Bukkyo University Museum_260305_3.jpg', 'Moving to Bukkyo University Museum 3') }}
+        {{ galleryItem('../images/ksitigarbha-bodhisattva/LINE_ALBUM_20260213-20 Moving to Bukkyo University Museum_260305_4.jpg', 'Moving to Bukkyo University Museum 4') }}
+        {{ galleryItem('../images/ksitigarbha-bodhisattva/LINE_ALBUM_20260213-20 Moving to Bukkyo University Museum_260305_5.jpg', 'Moving to Bukkyo University Museum 5') }}
+        {{ galleryItem('../images/ksitigarbha-bodhisattva/LINE_ALBUM_20260213-20 Moving to Bukkyo University Museum_260305_6.jpg', 'Moving to Bukkyo University Museum 6') }}
+        {{ galleryItem('../images/ksitigarbha-bodhisattva/LINE_ALBUM_20260213-20 Moving to Bukkyo University Museum_260305_7.jpg', 'Moving to Bukkyo University Museum 7') }}
+        {{ galleryItem('../images/ksitigarbha-bodhisattva/LINE_ALBUM_20260213-20 Moving to Bukkyo University Museum_260305_8.jpg', 'Moving to Bukkyo University Museum 8') }}
+        {{ galleryItem('../images/ksitigarbha-bodhisattva/LINE_ALBUM_20260213-20 Moving to Bukkyo University Museum_260305_9.jpg', 'Moving to Bukkyo University Museum 9') }}
+    </div>
+</div>
+
+<!-- Modal for full-size image -->
+<dialog id="imageModal" class="modal">
+    <div class="modal-box max-w-5xl p-0 overflow-hidden">
+        <form method="dialog">
+            <button class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2 z-10 text-white bg-black/50 hover:bg-black/70 border-0">✕</button>
+        </form>
+        <div class="flex justify-center items-center bg-black">
+            <img id="modalImage" alt="Full size image" class="max-h-[90vh] w-auto object-contain" />
+        </div>
+    </div>
+    <form method="dialog" class="modal-backdrop">
+        <button>close</button>
+    </form>
+</dialog>
+{% endblock %}
+
+{% block scripts %}
+<script>
+    function openModal(element) {
+        // Only open modal on medium screens and larger (768px+)
+        if (window.innerWidth < 768) {
+            return;
+        }
+        // Get the actual resolved src from the img element
+        const img = element.querySelector('img');
+        document.getElementById('modalImage').src = img.src;
+        document.getElementById('imageModal').showModal();
+    }
+</script>
+{% endblock %}

@@ -23,7 +23,8 @@ module.exports = {
         support: 'src/views/support.html',
         contact: 'src/views/contact.html',
         courses: 'src/views/courses.html',
-        lectures: 'src/views/lectures.html'
+        lectures: 'src/views/lectures.html',
+        ksitigarbha: 'src/views/ksitigarbha.html'
       },
       js: {
         // output filename of compiled JavaScript
