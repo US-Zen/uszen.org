@@ -24,7 +24,8 @@ module.exports = {
         contact: 'src/views/contact.html',
         courses: 'src/views/courses.html',
         lectures: 'src/views/lectures.html',
-        ksitigarbha: 'src/views/ksitigarbha.html'
+        ksitigarbha: 'src/views/ksitigarbha.html',
+        vesak: 'src/views/vesak.html'
       },
       js: {
         // output filename of compiled JavaScript
