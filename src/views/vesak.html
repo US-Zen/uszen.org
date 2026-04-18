@@ -51,5 +51,11 @@
             <img src="../images/vesak/1774305989334.jpg" alt="Vesak 2026" class="w-full rounded-lg shadow-lg cursor-pointer hover:opacity-90 transition-opacity" onclick="window.open(this.src, '_blank')" />
         </div>
     </div>
+
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-8">
+        {% for img in ["1774305989203.jpg", "1774305989292.jpg", "1776522808834.jpg", "1776522810788.jpg"] %}
+        <img src="../images/vesak/{{ img }}" alt="Vesak 2026" class="w-full rounded-lg shadow object-cover cursor-pointer hover:opacity-90 transition-opacity" onclick="window.open(this.src, '_blank')" />
+        {% endfor %}
+    </div>
 </div>
 {% endblock %}
