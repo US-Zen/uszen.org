@@ -1,0 +1,10 @@
+dist/
+node_modules/
+src/views/
+*.njk
+*.pdf
+*.png
+*.jpg
+*.webp
+*.svg
+*.ico

@@ -9,46 +9,56 @@
 </head>
 
 {% macro navItems() %}
-<li><a href="about.html">About</a></li>
+<li><a href="about.html" {% if activePage=='about' %}aria-current="page"{% endif %}>About</a></li>
 <li class="dropdown dropdown-hover lg:block hidden">
     <a tabindex="0" role="button">課程 Courses</a>
     <ul tabindex="0" class="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52">
-        <li><a href="lectures.html">開示 Lectures</a></li>
-        <li><a href="courses.html">講義 Lecture handout</a></li>
+        <li><a href="lectures.html" {% if activePage=='lectures' %}aria-current="page"{% endif %}>開示 Lectures</a></li>
+        <li><a href="courses.html" {% if activePage=='courses' %}aria-current="page"{% endif %}>講義 Lecture handout</a>
+        </li>
     </ul>
 </li>
 <li class="lg:hidden">
     <details>
         <summary>課程 Courses</summary>
         <ul class="p-2">
-            <li><a href="lectures.html">開示 Lectures</a></li>
-            <li><a href="courses.html">講義 Lecture handout</a></li>
+            <li><a href="lectures.html" {% if activePage=='lectures' %}aria-current="page"{% endif %}>開示 Lectures</a></li>
+            <li><a href="courses.html" {% if activePage=='courses' %}aria-current="page"{% endif %}>講義 Lecture handout</a>
+            </li>
         </ul>
     </details>
 </li>
-<li><a href="ksitigarbha.html">地藏菩薩 Kṣitigarbha</a></li>
-<li><a href="support.html">護持我們道場 Support Us</a></li>
-<li><a href="columbarium.html">舍利堂新翼 Columbarium Wing Project</a></li>
-<li><a href="contact.html">聯絡方式 Contact</a></li>
-<li><a href="documents/2026_USZI_Schedule.pdf" target="_blank" rel="noopener noreferrer">活動行事曆 Event Calendar</a></li>
-<li><a href="documents/Longevity_Light.pdf" target="_blank" rel="noopener noreferrer">光明燈登記</a></li>
-<li><a href="documents/Thrice_Yearning_form.pdf" target="_blank" rel="noopener noreferrer">超薦牌位登記</a></li>
+<li><a href="ksitigarbha.html" {% if activePage=='ksitigarbha' %}aria-current="page"{% endif %}>地藏菩薩 Kṣitigarbha</a></li>
+<li><a href="support.html" {% if activePage=='support' %}aria-current="page"{% endif %}>護持我們道場 Support Us</a></li>
+<li><a href="columbarium.html" {% if activePage=='columbarium' %}aria-current="page"{% endif %}>舍利堂新翼 Columbarium
+        Wing Project</a></li>
+<li><a href="contact.html" {% if activePage=='contact' %}aria-current="page"{% endif %}>聯絡方式 Contact</a></li>
+<li><a href="documents/2026_USZI_Schedule.pdf" target="_blank" rel="noopener noreferrer"
+        aria-label="活動行事曆 Event Calendar, opens in new tab">活動行事曆 Event Calendar</a></li>
+<li><a href="documents/Longevity_Light.pdf" target="_blank" rel="noopener noreferrer"
+        aria-label="光明燈登記, opens in new tab">光明燈登記</a></li>
+<li><a href="documents/Thrice_Yearning_form.pdf" target="_blank" rel="noopener noreferrer"
+        aria-label="超薦牌位登記, opens in new tab">超薦牌位登記</a></li>
 {% endmacro %}
 
 <body>
-    <!-- block for banner content -->
+    <a href="#main-content"
+        class="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 focus:z-50 focus:px-4 focus:py-2 focus:bg-white focus:text-black focus:rounded focus:shadow-lg">
+        Skip to main content
+    </a>
+
     {% block banner %}{% endblock %}
 
     <header class="w-full container mx-auto hidden lg:block">
         <div class="flex flex-col items-center py-10">
-            <a href="index.html"><img src="../images/1710764632601.png" class="max-h-20" /></a>
+            <a href="index.html"><img src="../images/1710764632601.png" class="max-h-20" alt="US Zen Institute" /></a>
         </div>
     </header>
 
     <div class="navbar border-t border-b bg-gray-100 py-4">
         <div class="navbar-start">
             <div class="dropdown">
-                <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                <div tabindex="0" role="button" class="btn btn-ghost lg:hidden" aria-label="Toggle navigation menu">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
                         stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -73,8 +83,9 @@
         </div>
     </div>
 
-    <!-- block for specific page content -->
-    {% block content %}{% endblock %}
+    <main id="main-content">
+        {% block content %}{% endblock %}
+    </main>
 
     <footer class="footer p-10 bg-gray-100 border-t text-base-content">
         <aside class="text-xs lg:text-sm font-light">
@@ -82,29 +93,33 @@
             <span>19225 Liberty Mill Road, Germantown, MD 20874</span>
             <span>(301) 353-9781 | <a href="mailto:info@uszen.org">info@uszen.org</a></span>
         </aside>
-        <nav>
+        <nav aria-label="Related links">
             <h6 class="footer-title">Links</h6>
-            <a href="https://amata.global" class="link link-hover">amata.global</a>
-            <a href="https://amatavihara.org" class="link link-hover">amatavihara.org</a>
+            <a href="https://amata.global" class="link link-hover"
+                aria-label="amata.global, opens in new tab" target="_blank" rel="noopener noreferrer">amata.global</a>
+            <a href="https://amatavihara.org" class="link link-hover"
+                aria-label="amatavihara.org, opens in new tab" target="_blank" rel="noopener noreferrer">amatavihara.org</a>
         </nav>
-        <nav>
+        <nav aria-label="Social media">
             <h6 class="footer-title">Social</h6>
             <div class="grid grid-flow-col gap-4">
-                <a href="https://www.facebook.com/USZenMaryland">
+                <a href="https://www.facebook.com/USZenMaryland" aria-label="Facebook, opens in new tab"
+                    target="_blank" rel="noopener noreferrer">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
                         class="bi bi-facebook" viewBox="0 0 16 16">
                         <path
                             d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951" />
                     </svg>
                 </a>
-                <a href="https://www.youtube.com/channel/UCdXPMVQMjg_Rg_aLEym02yg">
+                <a href="https://www.youtube.com/channel/UCdXPMVQMjg_Rg_aLEym02yg"
+                    aria-label="YouTube, opens in new tab" target="_blank" rel="noopener noreferrer">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
                         class="bi bi-youtube" viewBox="0 0 16 16">
                         <path
                             d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.01 2.01 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.01 2.01 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31 31 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.01 2.01 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A100 100 0 0 1 7.858 2zM6.4 5.209v4.818l4.157-2.408z" />
                     </svg>
                 </a>
-                <a href="mailto:info@uszen.org">
+                <a href="mailto:info@uszen.org" aria-label="Send email to info@uszen.org">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
                         class="bi bi-envelope" viewBox="0 0 16 16">
                         <path
@@ -115,7 +130,7 @@
         </nav>
     </footer>
 
-    <!-- block for specific page scripts -->
+    <script src="../scripts/main.js"></script>
     {% block scripts %}{% endblock %}
 </body>
 

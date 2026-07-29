@@ -1,5 +1,5 @@
 {% extends "src/views/layout.html" %}
-
+{% set activePage = "about" %}
 {% set title="About US Zen Institute" %}
 
 {% block content %}
@@ -38,7 +38,7 @@
         
                 <div class="col-span-1">
                     <div class="flex flex-col">
-                        <img class="m-auto" src="../images/dhammadipa.png" />
+                        <img class="m-auto" src="../images/dhammadipa.png" loading="lazy" />
                         <span class="m-auto text-xs text-gray-800">Ven. Dr. Dhammadipa Sak</span>
                     </div>
                 </div>

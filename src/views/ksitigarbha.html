@@ -1,9 +1,9 @@
 {% extends "src/views/layout.html" %}
-
+{% set activePage = "ksitigarbha" %}
 {% set title="Kṣitigarbha Bodhisattva" %}
 
 {% macro galleryItem(imagePath, alt) %}
-<div class="break-inside-avoid bg-white rounded-lg shadow-md overflow-hidden cursor-pointer hover:shadow-lg transition-shadow md:cursor-zoom-in" onclick="openModal(this)">
+<div class="break-inside-avoid bg-white rounded-lg shadow-md overflow-hidden cursor-pointer hover:shadow-lg transition-shadow md:cursor-zoom-in" data-gallery-item>
     <img src="{{ imagePath }}" alt="Kṣitigarbha Bodhisattva - {{ alt }}" class="w-full h-auto" />
 </div>
 {% endmacro %}
@@ -73,16 +73,5 @@
 {% endblock %}
 
 {% block scripts %}
-<script>
-    function openModal(element) {
-        // Only open modal on medium screens and larger (768px+)
-        if (window.innerWidth < 768) {
-            return;
-        }
-        // Get the actual resolved src from the img element
-        const img = element.querySelector('img');
-        document.getElementById('modalImage').src = img.src;
-        document.getElementById('imageModal').showModal();
-    }
-</script>
+<script src="../scripts/ksitigarbha.js"></script>
 {% endblock %}
