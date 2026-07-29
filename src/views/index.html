@@ -74,103 +74,47 @@
                 支持這項充滿慈悲心的願景，為未來世代的佛弟子而建。
             </p>
         </div>
+        {% set carouselImages = [
+            '../images/homepage/1768422571103.jpg',
+            '../images/homepage/1768422572115.jpg',
+            '../images/homepage/1768422572828.jpg',
+            '../images/homepage/1768422573510.jpg',
+            '../images/homepage/1768422573954.jpg',
+            '../images/homepage/1768422578619.jpg',
+            '../images/homepage/20260131_114551.jpg',
+            '../images/homepage/20260131_114730.jpg',
+            '../images/homepage/20260131_115356.jpg',
+            '../images/homepage/1771015782232.jpg',
+            '../images/homepage/1771015782253.jpg',
+            '../images/homepage/1771015782255.jpg',
+            '../images/homepage/1771015782292.jpg',
+            '../images/homepage/1774887468803.jpg',
+            '../images/homepage/1774887468828.jpg',
+            '../images/homepage/1774887468830.jpg',
+            '../images/homepage/1774887473158.jpg',
+            '../images/homepage/1775838100626.jpg',
+            '../images/homepage/1775838100664.jpg',
+            '../images/homepage/1775838100676.jpg',
+            '../images/homepage/1775838100681.jpg',
+            '../images/homepage/1776345606796.jpg',
+            '../images/homepage/1776345612025.jpg',
+            '../images/homepage/1776345616310.jpg',
+            '../images/homepage/1776345620323.jpg',
+            '../images/homepage/1785357399814.jpg',
+            '../images/homepage/1785357405303.jpg',
+            '../images/homepage/1785357408364.jpg',
+            '../images/homepage/1785357411553.jpg',
+            '../images/homepage/1785357414600.jpg',
+            '../images/homepage/1785357417826.jpg',
+            '../images/homepage/1785357420941.jpg'
+        ] %}
+
         <div id="carousel" class="carousel mx-auto my-4 w-full sm:max-w-[600px] md:max-w-[800px] px-2">
-            {{
-                carouselItem(1, '../images/homepage/1768422571103.jpg')
-            }}
-            {{
-                carouselItem(2, '../images/homepage/1768422572115.jpg')
-            }}
-            {{
-                carouselItem(3, '../images/homepage/1768422572828.jpg')
-            }}
-            {{
-                carouselItem(4, '../images/homepage/1768422573510.jpg')
-            }}
-            {{
-                carouselItem(5, '../images/homepage/1768422573954.jpg')
-            }}
-            {{
-                carouselItem(6, '../images/homepage/1768422578619.jpg')
-            }}
-            {{
-                carouselItem(7, '../images/homepage/20260131_114551.jpg')
-            }}
-            {{
-                carouselItem(8, '../images/homepage/20260131_114730.jpg')
-            }}
-            {{
-                carouselItem(9, '../images/homepage/20260131_115356.jpg')
-            }}
-            {{
-                carouselItem(10, '../images/homepage/1771015782232.jpg')
-            }}
-            {{
-                carouselItem(11, '../images/homepage/1771015782253.jpg')
-            }}
-            {{
-                carouselItem(12, '../images/homepage/1771015782255.jpg')
-            }}
-            {{
-                carouselItem(13, '../images/homepage/1771015782292.jpg')
-            }}
-            {{
-                carouselItem(14, '../images/homepage/1774887468803.jpg')
-            }}
-            {{
-                carouselItem(15, '../images/homepage/1774887468828.jpg')
-            }}
-            {{
-                carouselItem(16, '../images/homepage/1774887468830.jpg')
-            }}
-            {{
-                carouselItem(17, '../images/homepage/1774887473158.jpg')
-            }}
-            {{
-                carouselItem(18, '../images/homepage/1775838100626.jpg')
-            }}
-            {{
-                carouselItem(19, '../images/homepage/1775838100664.jpg')
-            }}
-            {{
-                carouselItem(20, '../images/homepage/1775838100676.jpg')
-            }}
-            {{
-                carouselItem(21, '../images/homepage/1775838100681.jpg')
-            }}
-            {{
-                carouselItem(22, '../images/homepage/1776345606796.jpg')
-            }}
-            {{
-                carouselItem(23, '../images/homepage/1776345612025.jpg')
-            }}
-            {{
-                carouselItem(24, '../images/homepage/1776345616310.jpg')
-            }}
-            {{
-                carouselItem(25, '../images/homepage/1776345620323.jpg')
-            }}
-            {{
-                carouselItem(26, '../images/homepage/1785357399814.jpg')
-            }}
-            {{
-                carouselItem(27, '../images/homepage/1785357405303.jpg')
-            }}
-            {{
-                carouselItem(28, '../images/homepage/1785357408364.jpg')
-            }}
-            {{
-                carouselItem(29, '../images/homepage/1785357411553.jpg')
-            }}
-            {{
-                carouselItem(30, '../images/homepage/1785357414600.jpg')
-            }}
-            {{
-                carouselItem(31, '../images/homepage/1785357417826.jpg')
-            }}
-            {{
-                carouselItem(32, '../images/homepage/1785357420941.jpg')
-            }}
+            {% for image in carouselImages %}
+                {{
+                    carouselItem(loop.index, image)
+                }}
+            {% endfor %}
         </div>
         <div class="text-center mt-4">
             <a href="columbarium.html" class="inline-flex flex-col items-center bg-yellow-500 text-black px-5 py-2 rounded font-semibold hover:bg-yellow-600">
