@@ -1,6 +1,7 @@
 {% extends "src/views/layout.html" %}
 {% set activePage = "ksitigarbha" %}
 {% set title="Kṣitigarbha Bodhisattva" %}
+{% set description="Photos of the Kṣitigarbha Bodhisattva statue created by Rev. Masahiro Maeda at Bukkyo University Museum, Kyoto, for US Zen Institute's columbarium." %}
 
 {% macro galleryItem(imagePath, alt) %}
 <div class="break-inside-avoid bg-white rounded-lg shadow-md overflow-hidden cursor-pointer hover:shadow-lg transition-shadow md:cursor-zoom-in" data-gallery-item>
@@ -11,7 +12,7 @@
 {% block content %}
 <div class="container mx-auto px-4 py-8 max-w-5xl">
     <div class="prose-sm lg:prose-base max-w-none mb-8">
-        <h2 class="text-center">Kṣitigarbha Bodhisattva</h2>
+        <h1 class="text-center">Kṣitigarbha Bodhisattva</h1>
         <p>
             The statue of Kṣitigarbha Bodhisattva was created by the artist Rev. Masahiro Maeda in his workshop at the Museum of Bukkyo University in Kyoto, Japan.
         </p>

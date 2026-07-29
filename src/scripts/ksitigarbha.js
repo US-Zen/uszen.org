@@ -6,7 +6,6 @@
   document.addEventListener('click', function (e) {
     var galleryItem = e.target.closest('[data-gallery-item]');
     if (!galleryItem) return;
-    if (window.innerWidth < 768) return;
     var img = galleryItem.querySelector('img');
     if (img) {
       modalImage.src = img.src;

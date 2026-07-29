@@ -1,6 +1,7 @@
 {% extends "src/views/layout.html" %}
 {% set activePage = "index" %}
 {% set title="US Zen Institute" %}
+{% set description="US Zen Institute — a Buddhist temple in Germantown, Maryland. Bilingual Chinese/English teachings, meditation, and community since 1988." %}
 
 {% macro carouselItem(index, imageLink) %}
 <div id="slide{{ index }}" class="carousel-item relative flex flex-col w-full">
@@ -41,6 +42,7 @@
 {% endblock %}
 
 {% block content %}
+<h1 class="sr-only">US Zen Institute</h1>
 <div class="flex justify-center items-center mb-16">
     <img src="../images/uszen.jpg" />
 </div>
