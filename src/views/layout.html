@@ -5,7 +5,17 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>{{ title }}</title>
-    <link rel="stylesheet" href="../sass/index.scss">
+    <meta name="description" content="{% if description %}{{ description }}{% else %}US Zen Institute — Buddhist temple in Germantown, Maryland offering bilingual teachings, meditation, and community events.{% endif %}">
+    <meta property="og:title" content="{{ title }}">
+    <meta property="og:description" content="{% if description %}{{ description }}{% else %}US Zen Institute — Buddhist temple in Germantown, Maryland.{% endif %}">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://uszen.org">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="{{ title }}">
+    <meta name="twitter:description" content="{% if description %}{{ description }}{% else %}US Zen Institute — Buddhist temple in Germantown, Maryland.{% endif %}">
+    <link rel="icon" href="../favicon.ico" sizes="any">
+    <link rel="apple-touch-icon" href="../apple-touch-icon.png">
+    <link rel="stylesheet" href="../sass/main.scss">
 </head>
 
 {% macro navItems() %}
@@ -89,7 +99,7 @@
 
     <footer class="footer p-10 bg-gray-100 border-t text-base-content">
         <aside class="text-xs lg:text-sm font-light">
-            <span>2025 © US Zen Institute, Inc.</span>
+            <span>2026 © US Zen Institute, Inc.</span>
             <span>19225 Liberty Mill Road, Germantown, MD 20874</span>
             <span>(301) 353-9781 | <a href="mailto:info@uszen.org">info@uszen.org</a></span>
         </aside>
