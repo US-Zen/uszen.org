@@ -39,6 +39,7 @@ module.exports = {
     new CopyPlugin({
       patterns: [
         { from: "src/documents", to: "documents" },
+        { from: "src/favicon.svg", to: "favicon.svg" },
         { from: "src/favicon.ico", to: "favicon.ico", noErrorOnMissing: true },
         { from: "src/apple-touch-icon.png", to: "apple-touch-icon.png", noErrorOnMissing: true },
         { from: "src/robots.txt", to: "robots.txt" },
