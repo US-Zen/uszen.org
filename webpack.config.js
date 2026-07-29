@@ -1,6 +1,7 @@
 const path = require('path');
 const HtmlBundlerPlugin = require('html-bundler-webpack-plugin');
 const CopyPlugin = require("copy-webpack-plugin");
+const SitemapPlugin = require('sitemap-webpack-plugin').default;
 
 const isProd = !process.argv.find((str) => str.includes('development'));
 
@@ -24,22 +25,35 @@ module.exports = {
         contact: 'src/views/contact.html',
         courses: 'src/views/courses.html',
         lectures: 'src/views/lectures.html',
-        ksitigarbha: 'src/views/ksitigarbha.html'
+        ksitigarbha: 'src/views/ksitigarbha.html',
+        '404': 'src/views/404.html'
       },
       js: {
-        // output filename of compiled JavaScript
         filename: 'js/[name].[contenthash:8].js',
       },
       css: {
-        // output filename of extracted CSS
         filename: 'css/[name].[contenthash:8].css',
       },
-      preprocessor: 'nunjucks', // use the Nunjucks template engine
+      preprocessor: 'nunjucks',
     }),
     new CopyPlugin({
       patterns: [
-        { from: "src/documents", to: "documents" }
+        { from: "src/documents", to: "documents" },
+        { from: "src/favicon.ico", to: "favicon.ico", noErrorOnMissing: true },
+        { from: "src/apple-touch-icon.png", to: "apple-touch-icon.png", noErrorOnMissing: true },
+        { from: "src/robots.txt", to: "robots.txt" },
       ],
+    }),
+    new SitemapPlugin({
+      base: 'https://uszen.org',
+      paths: [
+        '/', '/about', '/columbarium', '/support', '/contact',
+        '/courses', '/lectures', '/ksitigarbha'
+      ],
+      options: {
+        filename: 'sitemap.xml',
+        lastmod: true,
+      },
     }),
   ],
 
