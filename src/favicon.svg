@@ -1,6 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-  <rect width="64" height="64" rx="10" fill="#1a1a1a"/>
-  <g transform="translate(32,32)" stroke="white" stroke-width="2.5" fill="none">
+  <g transform="translate(32,32)" stroke="#1a1a1a" stroke-width="2.5" fill="none">
     <circle r="26"/>
     <circle r="8"/>
     <line x1="0" y1="-26" x2="0" y2="26"/>
